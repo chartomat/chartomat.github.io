@@ -1,0 +1,26 @@
+body {
+    font-family: sans-serif;
+}
+
+body, h1 {
+    margin: 0;
+}
+
+#header {
+    color: #ffffff;
+    background-color: #2196f3;
+    line-height: 35px;
+    padding: 5px;
+}
+
+#tableContainer, #chartContainer {
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+    height: calc(100vh - 45px);
+    overflow: auto;
+}
+
+#tableContainer {
+	border-right: 1px solid #aaa;
+}
