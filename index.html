@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>chartomat</title>
 
+    <script src="libs/jquery-1.12.0/jquery.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.20.1/handsontable.full.js"></script>
     <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.20.1/handsontable.full.css">
 
@@ -15,6 +17,7 @@
 <body>
     <div id="header">
         <h1>chartomat</h1>
+        <a href="#" onclick="chartomat.save()">Save</a>
     </div>
 
     <div id="tableContainer">
@@ -26,8 +29,7 @@
     </div>
     
     <script>
-        chartomat.table();
-        chartomat.plot();
+        chartomat.init();
     </script>
     
     <script>
