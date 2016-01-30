@@ -10,7 +10,13 @@
 <body>
     <div id="header">
         <h1>chartomat</h1>
-        <a href="#" onclick="chartomat.save()">Save</a>
+        <a class="btn" onclick="chartomat.save()">Save</a>
+        <a class="btn" id="share-btn" onclick="chartomat.shareTooltip.toggle()" hidden>Share</a>
+        <div id="share-tooltip" hidden>
+            <div class="arrow-up"></div>
+            <label>embed code:</label>
+            <textarea id="embed-code" rows="4" readonly></textarea>
+        </div>
     </div>
 
     <div id="tableContainer">

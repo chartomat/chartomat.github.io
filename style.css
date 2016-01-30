@@ -22,13 +22,15 @@ a {
     float: left;
 }
 
-#header a {
+#header a.btn {
     float: right;
     width: 70px;
     line-height: inherit;
     text-align: center;
     color: inherit;
     background-color: rgba(255,255,255,0.25);
+    margin-left: 5px;
+    cursor: pointer;
 }
 
 #header:after {
@@ -36,6 +38,46 @@ a {
     display: table;
     clear: both;
 }
+
+#share-tooltip {
+    position: absolute;
+    right: 5px;
+    top: 50px;
+    color: #333;
+    background: #ccc;
+    box-shadow: 1px 1px 2px #888;
+    padding: 10px;
+    line-height: 1em;
+    z-index: 10000;
+}
+
+#share-tooltip:before {
+    content: "";
+    display: inline-block;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ccc;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -10px;
+    right: 100px;
+}
+
+#share-tooltip label {
+    font-size: 0.9em;
+    display: block;
+}
+
+#share-tooltip textarea {
+    margin-top: 10px;
+    width: 300px;
+}
+
+#embed-code {
+    resize: none;
+}
+
 
 #tableContainer, #chartContainer {
     float: left;
