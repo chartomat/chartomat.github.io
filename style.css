@@ -72,6 +72,7 @@ a {
 #share-tooltip textarea {
     margin-top: 10px;
     width: 300px;
+    font-size: 11px;
 }
 
 #embed-code {
@@ -84,13 +85,26 @@ a {
     box-sizing: border-box;
     width: 50%;
     height: calc(100vh - 45px);
-    overflow: auto;
-}
-
-#tableContainer {
-	border-right: 1px solid #aaa;
+    overflow: hidden;
 }
 
 #table {
     width: 100%;
+}
+
+@media all and (orientation: landscape) {
+    #tableContainer {
+        border-right: 1px solid #aaa;
+    }
+}
+
+@media all and (orientation: portrait) {
+    #tableContainer, #chartContainer {
+        width: 100%;
+        height: calc(50vh - 22.5px);
+    }
+    
+    #tableContainer {
+        border-bottom: 1px solid #aaa;
+    }
 }
