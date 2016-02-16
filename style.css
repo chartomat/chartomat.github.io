@@ -120,6 +120,29 @@ a {
     right: 22px !important;
 }
 
+#chart-types {
+    padding: 5px;
+}
+
+#chart-types label > input {
+  visibility: hidden;
+  position: absolute;
+}
+
+#chart-types label > input + svg {
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 3px 3px 3px 3px;
+}
+
+#chart-types label > input:checked + svg {
+  border: 1px solid #aaa;
+}
+
+#chart-types label > input:hover + svg {
+  border: 1px solid #ccc;
+}
+
 @media all and (orientation: landscape) {
     #tableContainer {
         border-right: 1px solid #aaa;
