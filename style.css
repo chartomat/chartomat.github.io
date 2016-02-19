@@ -120,8 +120,26 @@ a {
     right: 22px !important;
 }
 
-#chart-types {
+#chart-title {
+    display: block;
+    min-width: 300px;
+    margin: 0 auto;
     padding: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+#options h2 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+#chart-types {
+    margin-top: 10px;
+}
+
+#chart-types label {
+    padding-right: 10px;
 }
 
 #chart-types label > input {
