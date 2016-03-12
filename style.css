@@ -79,13 +79,28 @@ a {
     resize: none;
 }
 
-
 #tableContainer, #chartContainer {
-    float: left;
+    position: absolute;
     box-sizing: border-box;
     width: 50%;
     height: calc(100vh - 45px);
     overflow: hidden;
+    top: 45px;
+}
+
+#chartContainer {
+    left: 50%
+}
+
+#gutter {
+    background: #ddd;
+    cursor: col-resize;
+    position: absolute;
+    top: 45px;
+    left: 50%;  
+    width: 6px;
+    height: calc(100vh - 45px);
+    z-index: 1002;
 }
 
 #table {
@@ -95,8 +110,8 @@ a {
 }
 
 #options-icon {
-    position: fixed;
-    top: 50px;
+    position: absolute;
+    top: 5px;
     right: 5px;
 }
 #options-icon path {
@@ -108,10 +123,10 @@ a {
 }   
 
 #options {
-    position: fixed;
-    top: 50px;
+    position: absolute;
+    top: 5px;
     right: 25px;
-    left: calc(50% + 25px);
+    left: 25px;
     padding: 10px;
     background: #ddd;
     box-shadow: 1px 1px 2px #888;
@@ -163,28 +178,31 @@ a {
   border: 1px solid #ccc;
 }
 
-@media all and (orientation: landscape) {
-    #tableContainer {
-        border-right: 1px solid #aaa;
-    }
-}
-
 @media all and (orientation: portrait) {
     #tableContainer, #chartContainer {
         width: 100%;
         height: calc(50vh - 22.5px);
     }
     
-    #tableContainer {
-        border-bottom: 1px solid #aaa;
+    #chartContainer {
+        left: 0;
+        top: calc(50% + 22.5px);
+    }
+    
+    #gutter {
+        cursor: row-resize;
+        top: calc(50% + 22.5px);
+        left: 0;
+        width: 100%;
+        height: 6px;
     }
     
     #options { 
-        top: calc(50% + 28px);
+        top: 5px;
         left: 25px;
     }
     
     #options-icon {
-        top: calc(50% + 28px);
+        top: 5px;
     }
 }
