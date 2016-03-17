@@ -103,6 +103,10 @@ a {
     z-index: 1002;
 }
 
+#gutter.dragging {
+    background: #ccc;
+}
+
 #table {
     width: 100%;
     height: 100%;
